@@ -1,0 +1,117 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+:root{
+    --dark-blue:#211C6A;
+    --light-blue:#59B4C3;
+    --white:#FFFFFF;
+    --coral-pink:#F88379;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* header section starts */
+header{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 70px;
+    position:fixed;
+    top:0;
+    margin-left: -7px;
+    background-color: var(--white);
+}
+.logo{
+    margin-top: 8px;
+}
+.headerleft{
+    display: flex;
+    gap: 30px;
+    margin-left:6px;
+}
+.headerright{
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+}
+.hmargin{
+    margin-top: 20px;
+}
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    list-style: none;
+}
+nav > ul > li {
+    color:var(--dark-blue);
+    margin: 0 0.2rem;
+    margin-right: 10px;
+    padding: 0.2rem;
+    display: block;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-family: Tahoma, sans-serifs;
+}
+#searchbox{
+    margin-right:30px;
+    width:300px;
+    padding:8px 19px;
+    margin-top: -2px;
+    border-width: 0.001px;   
+    border-radius: 6px;
+}
+.hbutton{
+    white-space: nowrap;
+    padding:8px 19px;
+    border-radius: 6px;
+    border-width: 0.01px;
+}
+.login{
+    background-color: var(--white);
+    color:var(--dark-blue)
+}
+.register{
+    background-color: var(--dark-blue);
+    color:var(--white);
+}
+/* header section starts */
+/* header section starts */
+main{
+    margin-top: 100px;
+}
+.projlabel{
+    display:block;
+    margin:0.5em auto;
+    padding-bottom:0.5em;
+    font-size:20px;
+    font-family:tahoma;
+}
+input, textarea, select{
+    width:100%;
+    margin:0.5em 0;
+    padding:0.5em 0.5em;
+    font-size:15px;
+    }
+
+.create{
+     width: 70%;
+    margin: 75px auto;  
+    padding:20px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 0 var(--light-blue);
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+    color: var(--dark-blue);
+}

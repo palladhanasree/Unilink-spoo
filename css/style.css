@@ -1,0 +1,190 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+:root{
+    --dark-blue:#211C6A;
+    --light-blue:#59B4C3;
+    --white:#FFFFFF;
+    --coral-pink:#F88379;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* header section starts */
+header{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height: 70px;
+    position:fixed;
+    top:0;
+    margin-left: -7px;
+    background-color: var(--white);
+}
+.logo{
+    margin-top: 8px;
+}
+.headerleft{
+    display: flex;
+    gap: 30px;
+    margin-left:6px;
+}
+.headerright{
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+}
+.hmargin{
+    margin-top: 20px;
+}
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    list-style: none;
+}
+nav > ul > li {
+    color:var(--dark-blue);
+    margin: 0 0.2rem;
+    margin-right: 10px;
+    padding: 0.2rem;
+    display: block;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-family: Tahoma, sans-serifs;
+}
+#searchbox{
+    margin-right:30px;
+    width:300px;
+    padding:8px 19px;
+    margin-top: -2px;
+    border-width: 0.001px;   
+    border-radius: 6px;
+}
+.hbutton{
+    white-space: nowrap;
+    padding:8px 19px;
+    border-radius: 6px;
+    border-width: 0.01px;
+}
+.login{
+    background-color: var(--white);
+    color:var(--dark-blue)
+}
+.register{
+    background-color: var(--dark-blue);
+    color:var(--white);
+}
+
+/* header section ends */
+
+/* main section starts */
+/* login section starts */
+main{
+    margin-top: 100px;
+}
+.lpara{
+    display: flex;
+    flex-direction: column;
+}
+.paraimage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+.limage{
+    width: 750px;
+    margin-right: -50px;
+}
+.paras > h1{
+    font-family:Tahoma,Verdana, sans-serif;
+    font-size: 30px;
+    color: var(--dark-blue);
+}
+.paras >h5{
+    font-family:Tahoma,Verdana, sans-serif;
+    font-size: 12px;   
+    color: var(--coral-pink);
+}
+.paras{
+    margin-top: 100px;
+}
+input{
+    width:100%; 
+    font-size:15px;
+    border-radius: 6px;
+    padding:8px 19px;
+    border-width: 0.001px; 
+    margin:4px 0 8px 0;
+}
+.lemail{ 
+    font-family:Tahoma,Verdana, sans-serif; 
+    font-size: 14px;
+}
+.lpassword{
+    font-family:Tahoma,Verdana, sans-serif; 
+    font-size: 14px;
+    
+}
+.registerlogin{
+    white-space: nowrap;
+    padding:8px 25px;
+    border-radius: 6px;
+    border-width: 0.01px;
+    background-color: var(--dark-blue);
+    color:var(--white);
+}
+/* login section ends */
+
+/* project section starts */
+.projsection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   
+
+
+}
+.projcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    width: 300px;
+    height: 200px;
+    border-image-width: 250px;
+    object-fit: cover;
+    border:1px solid gray;
+    border-radius: 8px;
+
+    
+}
+.projcard img {
+    width: 100%;
+    max-width: 280px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+.projdesc>h4{
+    margin: 5px;
+}
+.proj{
+    display: flex;
+    flex-direction: column;
+}
+.projhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
