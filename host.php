@@ -23,6 +23,7 @@ if(isset($_SESSION['email'])){
                 <div class="create">
                     <form method="post">
                     <label for="projtitle" class="projlabel">Project Title<input type="text" id="projtitle" name="title"></label><br>
+                    <label for="projtitle" class="projlabel">Project Id<input type="text" id="projid" name="pid"></label><br>
                     <label for="projfield" class="projlabel">Field 
                         <select name="field" id="projfield">
                             <?php 
@@ -35,6 +36,8 @@ if(isset($_SESSION['email'])){
                     <label for="projdesc" class="projlabel">Description <textarea id="suggestions" name ="description" rows="3" cols="30" placeholder="Enter the description here..."></textarea></label><br>
                     <label for="projdesc" class="projlabel">Size of the team<input type="number" id="projmem" name="size"></label><br>
                     <label for="projdesc" class="projlabel">Estimated Deadline<input type="date" id="projdead" name="deadline"></label><br>
+                    <label for="projtitle" class="projlabel">Git Repo Link<input type="text" id="gitrepo" name="gitrepo"></label><br>
+                    <label for="projtitle" class="projlabel">Gistfile <input type="text" id="gistfile" name="gistfile"></label><br>
                     <button type="submit" id="ex3" name="host" class="btn-primary">Host</button>
                     </form>
                 </div>
@@ -48,8 +51,10 @@ if(isset($_SESSION['email'])){
     $description = $_POST["description"];
     $size = $_POST["size"];
     $deadline = $_POST["deadline"];
-    
-    $sql="INSERT INTO  team (`title`, `field`,`description`,`size`,`deadline`,`email`) VALUES ('$title','$field','$description','$size','$deadline','$email')";
+    $gitrepo = $_POST["gitrepo"];
+    $gistfile= $_POST["gistfile"];
+    $pid = $_POST["pid"];
+    $sql="INSERT INTO  projects (`project_id`,`project_name`, `field_id`,`hostname`,`start_date`,`end_date`,`ongoing`,`description`,`img`,`git_repo`,`gistfile`) VALUES ('$pid','$title','2','spoo','20-01-2023','$deadline','1','$description','homeimage.png','$gitrepo','$gistfile')";
     $query=mysqli_query($con,$sql);
     if($query){
         ?>

@@ -22,7 +22,7 @@ $all_project = $con->query($sq);
         <meta charset="utf-8">
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="css/project.css">
+        <link rel="stylesheet" href="css/pro.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
 
@@ -44,7 +44,8 @@ $all_project = $con->query($sq);
                             <div  class="mproj1 myproj">
                                
                                 <div>
-                                <h2><a href="pdesc.php?id=<?php echo $row["project_id"]; ?>"><?php echo $row["project_name"]; ?></a></h2>    
+                                <h2><a href="pdesc.php?id=<?php echo $row["project_id"]; ?> "><?php echo $row["project_name"]; ?></a>
+</a></h2>    
                                      <h4>End Date - <?php echo $row["end_date"]; ?></h4>
                                   
                                 </div>
@@ -65,9 +66,8 @@ $all_project = $con->query($sq);
                             <div  class="mproj1 myproj">
                                
                                 <div>
-                                    <h2> <a href="join.php" id="title"><?php echo $row["title"]; ?></a></h2>
-    
-                                     <h4>End Date - <?php echo $row["deadline"]; ?></h4>
+                                    <h2><a href="join.php?id=<?php echo $row["project_id"]; ?>"><?php echo $row["project_name"]; ?></a></h2>  
+                                     <h4>End Date - <?php echo $row["end_date"]; ?></h4>
                                   
                                 </div>
                                 <div><img src="img\homeimage.png" alt=""></div>
@@ -93,8 +93,10 @@ $all_project = $con->query($sq);
                   $domain_row = mysqli_fetch_assoc($domain_result); 
         
                   ?>
-          <a href="">
+               <a href="pdesc.php?id=<?php echo $row["project_id"]; ?>">
             <div class="proj1 projcard">
+         
+            <img src="<?php echo $row["img"]; ?>" alt="">
                 <h4><?php echo $row["project_name"]; ?></h4>
                 <h5 class="hfield"><?php echo $domain_row["DName"]; ?></h5> 
                 <h5><?php echo $row["end_date"]; ?></h5>

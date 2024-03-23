@@ -1,6 +1,18 @@
+<!DOCTYPE html>
 <?php
-require_once('projdesc.php');
-$sq= "Select * from projects where project_id = 3";
+require_once('connection.php');
+require('navigation.php');
+?>
+<?php
+// Check if the project ID is passed in the URL
+session_start(); 
+if(isset($_GET['id'])) {
+    // Retrieve the project ID from the URL parameter
+    $project_id = $_GET['id'];
+
+    // You can now use $project_id in your code
+}
+$sq = "SELECT * FROM `projects`  where project_id = '$project_id' ";
 $description = $con->query($sq);
 ?>
 <html>  
@@ -14,6 +26,25 @@ $description = $con->query($sq);
     </head>
     
     <body>
+    <main>
+                <div class="content">
+                    <div class="wrapper">
+                        <div class="sidebar">
+                            <ul>
+                                <li><a href="pdesc.php"><i class="fa-solid fa-file-lines fa-2x"></i></a></li>    
+                                <li><a href="code.php?id=<?php echo $project_id; ?>"><i class="fa-solid fa-code fa-2x"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-people-group fa-2x"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-calendar-check fa-2x"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-comments fa-2x"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-book-bookmark fa-2x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+              
+                  
+                </div>
+         
+            </main>
 <div class="pdeatils"> 
               
                     <?php 
@@ -22,7 +53,7 @@ $description = $con->query($sq);
                    
                          <div class="pdesc">
       
-                         <h1>Project Description</h1>
+                         <h1><?php echo $row["project_name"]; ?></h1>
                         <h2>End date - <?php echo $row["end_date"]; ?></h2>
         
         <p>
@@ -33,7 +64,7 @@ $description = $con->query($sq);
                  }
                  ?>
     </div>
-    <span>Hosted by Spoo</span>
+    <span>Hosted by Spoorthi</span>
 </div>
 </main>
 </body>

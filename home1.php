@@ -19,7 +19,7 @@ $all_explore = $con->query($sq);
         <meta charset="utf-8">
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="css/project.css">
+        <link rel="stylesheet" href="css/projects.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
 
@@ -42,8 +42,9 @@ $all_explore = $con->query($sq);
                           $domain_row = mysqli_fetch_assoc($domain_result); 
                 
                           ?>
-                  <a href="pcard.php">
+                 <a href="pdesc.php?id=<?php echo $row["project_id"]; ?>">
                     <div class="proj1 projcard">
+                        <img src="<?php echo $row["img"]; ?>" alt="">
                         <h4><?php echo $row["project_name"]; ?></h4>
                         <h5 class="hfield"><?php echo $domain_row["DName"]; ?></h5> 
                         <h5><?php echo $row["end_date"]; ?></h5>

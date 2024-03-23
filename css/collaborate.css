@@ -23,7 +23,6 @@ header{
     top:0;
     margin-left: -7px;
     background-color: var(--white);
-    box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
 }
 .logo{
     margin-top: 8px;
@@ -76,6 +75,7 @@ a{
     padding:8px 19px;
     border-radius: 6px;
     border-width: 0.01px;
+
 }
 .login{
     background-color: var(--white);
@@ -85,29 +85,18 @@ a{
     background-color: var(--dark-blue);
     color:var(--white);
 }
-
-/* header section ends */
-.projects{
-    margin-top: 100px;
-}
-
-.otherproj{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
 .projcard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;;
     width: 300px;
-    height: 150px;
+    height: 300px;
     border:1px solid  rgba(0, 0, 0, 0.24);
     border-radius: 8px;
     margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: grid;
     
+}
+.projcard img{
+    margin-top: 8px;
 }
 
 .projdivider{
@@ -116,8 +105,7 @@ a{
 }
 
 .myproj{
-    border:1px solid  rgba(0, 0, 0, 0.24);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:1px solid gray;
     height: 150px;
     margin: 10px 20px 10px 20px;
     display: flex;
@@ -134,22 +122,41 @@ a{
 
 h1,h2,h3,h4,h5{
     margin-left: 20px;
+    margin-bottom: 0;
 }
 .myproj>div>h4{
     color: var(--coral-pink);
 }
 
-.projcard > h4{
+.projcard >form>h4{
     color: var(--dark-blue);
     margin-top: 25px;
 }
-.projcard > .hfield{
+.projcard >form> .hfield{
    margin-top: 10px;
    color: black;
 }
-.projcard > h5{
-    margin-top: -8px;
+.projcard >form>h5{
+    margin-top: -2px;
     color:var(--coral-pink);
+    padding-bottom: 5px;
 }
 
-
+.otherproj{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.pbutton{
+    width:50px;
+    margin-top: auto;
+    margin-left:220px;
+    white-space: nowrap;
+    border-radius: 6px;
+    border-width: 0.01px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 4px 2px;
+}

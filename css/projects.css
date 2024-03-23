@@ -1,0 +1,33 @@
+.projects{
+    margin-top: 100px;
+}
+
+.otherproj{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.projcard{
+    width: 300px;
+    height: 300px;
+    border:1px solid  rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: grid;
+    
+}
+
+.projcard img{
+    justify-self: center;
+    width: inherit;
+    padding: 2px;
+    margin: 8px;
+}
+
+.projcard h4,h5{
+    margin: 0;
+    margin-inline-start: 20px;
+}
+

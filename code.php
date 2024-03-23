@@ -1,5 +1,17 @@
 <?php
 require_once('projdesc.php');
+if(isset($_GET['id'])) {
+    // Retrieve the project ID from the URL parameter
+    $project_id = $_GET['id'];
+
+    // You can now use $project_id in your code
+
+    $sq = "SELECT * FROM `projects`  WHERE project_id = '$project_id'";
+    $description = $con->query($sq);
+
+    // Rest of your code to display project details
+    // ...
+}
 ?>
 <html>  
     <head>
@@ -24,11 +36,17 @@ require_once('projdesc.php');
     <body>
 <div class="pdeatils">
     <h1>Code</h1>
-    <button><a href="https://github.com/Spoooo8/DFA-String-Processing">view repo</a></button>
-    <div style="height: 400px; overflow: auto;">
-        <script src="https://gist.github.com/Spoooo8/b7d04c9d9d09101fd2cca137fa60da46.js"></script>
+    <?php 
+                        while($row = mysqli_fetch_assoc($description)){
+                           ?>
+     <button><a href="<?php echo $row["git_repo"]; ?>">view repo</a></button>
+     <div style="height: 400px; overflow: auto;">
+        <script src="<?php echo $row["gistfile"]; ?>"></script>
     </div>
     <span>Hosted by Spoorthi</span>
+    <?php
+                 }
+                 ?>
 </div>
 </main>
 </body>
